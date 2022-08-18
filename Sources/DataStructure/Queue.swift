@@ -10,6 +10,10 @@ import Foundation
 public class Queue<E> {
     private var elements = [E]()
     
+    public init() {
+        
+    }
+    
     public func push(_ element: E) {
         elements.append(element)
     }
