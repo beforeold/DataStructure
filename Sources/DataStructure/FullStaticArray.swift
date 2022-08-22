@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class FullStackArray<E> {
+public class FullStaticArray<E> {
     private var _buffer: [E]
     
     public init(initial: [E]) {
