@@ -14,6 +14,10 @@ public class StaticArray<E> {
         _buffer = Array<E?>(repeating: nil, count: length)
     }
     
+    private init(initial: [E?]) {
+        _buffer = initial
+    }
+    
     public var length: Int {
         return _buffer.count
     }
@@ -26,5 +30,9 @@ public class StaticArray<E> {
         get {
             return _buffer[index]
         }
+    }
+    
+    public func copy() -> StaticArray<E> {
+        return StaticArray(initial: _buffer)
     }
 }

@@ -27,4 +27,8 @@ public class FullStaticArray<E> {
             return _buffer[index]
         }
     }
+    
+    public func copy() -> FullStaticArray<E> {
+        return FullStaticArray(initial: _buffer)
+    }
 }
