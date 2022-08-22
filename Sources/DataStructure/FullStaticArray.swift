@@ -32,3 +32,20 @@ public class FullStaticArray<E> {
         return FullStaticArray(initial: _buffer)
     }
 }
+
+extension FullStaticArray: CustomStringConvertible {
+    public var description: String {
+        var string = ""
+        string += "["
+        for i in 0..<length {
+            if i != 0 {
+                string += ", "
+            }
+            string += "\(self[i])"
+        }
+        
+        string += "]"
+        
+        return string
+    }
+}
