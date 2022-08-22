@@ -10,7 +10,7 @@ import Foundation
 public class FullStaticArray<E> {
     private var _buffer: [E]
     
-    public init(initial: [E]) {
+    public init(_ initial: [E]) {
         _buffer = initial
     }
     
@@ -29,7 +29,7 @@ public class FullStaticArray<E> {
     }
     
     public func copy() -> FullStaticArray<E> {
-        return FullStaticArray(initial: _buffer)
+        return FullStaticArray(_buffer)
     }
 }
 
